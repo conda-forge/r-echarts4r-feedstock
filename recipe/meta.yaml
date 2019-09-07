@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = '0.2.3' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/echarts4r_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/echarts4r/echarts4r_{{ version }}.tar.gz
-  sha256: 1c0c5aad39a0ac95ec2a7802cf0fbfed53150042641333d577d2f428af40eafb
+  sha256: d5189346619f9f02753fbc5da51f57e4341001ec243f46e9e07655e835efaf7b
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,29 +22,39 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-broom
+    - r-corrplot
     - r-countrycode
     - r-d3r
+    - r-data.tree
     - r-dplyr
+    - r-htmltools
     - r-htmlwidgets
+    - r-jsonlite
     - r-magrittr
     - r-purrr
     - r-scales
     - r-shiny
+    - r-stringi
   run:
     - r-base
     - r-broom
+    - r-corrplot
     - r-countrycode
     - r-d3r
+    - r-data.tree
     - r-dplyr
+    - r-htmltools
     - r-htmlwidgets
+    - r-jsonlite
     - r-magrittr
     - r-purrr
     - r-scales
     - r-shiny
+    - r-stringi
 
 test:
   commands:
@@ -66,21 +75,21 @@ extra:
 
 # Package: echarts4r
 # Title: Create Interactive Graphs with 'Echarts JavaScript' Version 4
-# Date: 2018-11-14
-# Version: 0.2.0
+# Date: 2019-07-15
+# Version: 0.2.3
 # Authors@R: person("John", "Coene", email = "jcoenep@gmail.com", role = c("aut", "cre"))
 # Description: Easily create interactive charts by leveraging the 'Echarts Javascript' library which includes 34 chart types, themes, 'Shiny' proxies and animations.
 # License: Apache License (>= 2.0)
 # Encoding: UTF-8
 # LazyData: true
-# Imports: htmlwidgets, magrittr, dplyr, purrr, countrycode, d3r, broom, shiny, scales
-# RoxygenNote: 6.1.0
-# Suggests: data.tree, jsonlite, knitr, rmarkdown, quantmod, png, tibble, htmltools, tidyr
+# Imports: htmlwidgets, magrittr, dplyr, purrr, countrycode, d3r, broom, shiny, scales, corrplot, data.tree, htmltools, jsonlite, stringi
+# Suggests: tidyr
+# RoxygenNote: 6.1.1
 # URL: http://echarts4r.john-coene.com/
 # BugReports: https://github.com/JohnCoene/echarts4r/issues
 # NeedsCompilation: no
-# Packaged: 2018-11-14 22:27:50 UTC; jp
+# Packaged: 2019-07-16 14:49:45 UTC; jcoe
 # Author: John Coene [aut, cre]
 # Maintainer: John Coene <jcoenep@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2018-11-14 22:50:03 UTC
+# Date/Publication: 2019-07-18 06:37:08 UTC
