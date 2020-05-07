@@ -1,4 +1,4 @@
-{% set version = '0.2.3' %}
+{% set version = "0.2.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,8 +13,8 @@ source:
   sha256: d5189346619f9f02753fbc5da51f57e4341001ec243f46e9e07655e835efaf7b
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  merge_build_host: true  # [win]
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -22,7 +22,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-broom
@@ -63,9 +63,8 @@ test:
 
 about:
   home: http://echarts4r.john-coene.com/
-  license: Apache (>= 2.0)
-  summary: Easily create interactive charts by leveraging the 'Echarts Javascript' library which
-    includes 34 chart types, themes, 'Shiny' proxies and animations.
+  license: Apache-2.0
+  summary: Easily create interactive charts by leveraging the 'Echarts Javascript' library which includes 34 chart types, themes, 'Shiny' proxies and animations.
   license_family: APACHE
 
 extra:
