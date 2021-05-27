@@ -36,6 +36,7 @@ Installing `r-echarts4r` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-echarts4r` can be installed with:
