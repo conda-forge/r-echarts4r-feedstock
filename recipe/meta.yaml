@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,33 +28,27 @@ requirements:
     - r-broom
     - r-corrplot
     - r-countrycode
-    - r-d3r
-    - r-data.tree
-    - r-dplyr
+    - r-dplyr >=0.7.0
     - r-htmltools
     - r-htmlwidgets
     - r-jsonlite
-    - r-magrittr
+    - r-rstudioapi
     - r-purrr
     - r-scales
     - r-shiny
-    - r-stringi
   run:
     - r-base
     - r-broom
     - r-corrplot
     - r-countrycode
-    - r-d3r
-    - r-data.tree
-    - r-dplyr
+    - r-dplyr >=0.7.0
     - r-htmltools
     - r-htmlwidgets
     - r-jsonlite
-    - r-magrittr
+    - r-rstudioapi
     - r-purrr
     - r-scales
     - r-shiny
-    - r-stringi
 
 test:
   commands:
