@@ -1,11 +1,11 @@
-About r-echarts4r
-=================
+About r-echarts4r-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-echarts4r-feedstock/blob/main/LICENSE.txt)
 
 Home: http://echarts4r.john-coene.com/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-echarts4r-feedstock/blob/main/LICENSE.txt)
 
 Summary: Easily create interactive charts by leveraging the 'Echarts Javascript' library which includes 34 chart types, themes, 'Shiny' proxies and animations.
 
