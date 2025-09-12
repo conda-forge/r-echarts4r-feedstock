@@ -1,4 +1,4 @@
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/echarts4r_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/echarts4r/echarts4r_{{ version }}.tar.gz
-  sha256: d818e778fb33a68354d940574bd776f39e0679d92af43b42ccdce50eae69eac8
+  sha256: cec772b4e64c788a435f048f9740c153a03f5aa90048820de52e4ba375c425a4
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
